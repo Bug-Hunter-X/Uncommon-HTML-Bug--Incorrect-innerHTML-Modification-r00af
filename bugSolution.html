@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Solution using DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('myDiv').innerHTML = "<p>This text replaces the original content.</p>";
+    });
+    //Alternative Solution
+    //Check if the element exists before using it
+   if(document.getElementById('myDiv')){
+    document.getElementById('myDiv').innerHTML = "<p>This text replaces the original content.</p>";
+   }
+  </script>
+</body>
+</html>
